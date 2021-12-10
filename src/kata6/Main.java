@@ -1,14 +1,18 @@
 package kata6;
 
 import java.util.Scanner;
-import toys.SerialNumberGenerator;
-import toys.ToyBusiness;
+import business.SerialNumberGenerator;
+import business.ToyBusiness;
+import business.branches.AmericanToyBusiness;
+import business.branches.AsianToyBusiness;
 
 public class Main {
 
     public static void main(String[] args) {
         SerialNumberGenerator serialNumberGenerator = new SerialNumberGenerator();
-        ToyBusiness toyBusiness = new ToyBusiness();
+        ToyBusiness toyBusiness = new AmericanToyBusiness();
+        //ToyBusiness toyBusiness = new AsianToyBusiness();
+
         while(true){
             System.out.print("Introduce command ('exit for exit): ");
             Scanner keyboard = new Scanner(System.in);
