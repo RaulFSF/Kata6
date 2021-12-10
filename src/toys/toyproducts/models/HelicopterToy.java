@@ -1,16 +1,20 @@
-package toys;
+package toys.toyproducts.models;
     
-public class Helicopter{
+import toys.toyproducts.Toy;
+
+public class HelicopterToy implements Toy{
     private Integer serialNumber;
 
-    public Helicopter(Integer serialNumber) {
+    public HelicopterToy(Integer serialNumber) {
         this.serialNumber = serialNumber;
     }
     
-     public void pack(){
+    @Override
+    public void pack(){
         System.out.println("The helicopter with serialNumber " + serialNumber.toString() + " is packed.");
     }
     
+    @Override
     public void label(){
         System.out.println("The helicopter with serialNumber " + serialNumber.toString() + " is labelled.");
     }

@@ -1,8 +1,6 @@
 package kata6;
 
 import java.util.Scanner;
-import toys.Car;
-import toys.Helicopter;
 import toys.SerialNumberGenerator;
 import toys.ToyBusiness;
 
@@ -18,9 +16,9 @@ public class Main {
             if(command.equals("exit")){
                 break;
             } else if(command.equals("car")){
-                toyBusiness.createCar();
+                toyBusiness.createToy("car");
             } else if(command.equals("helicopter")){
-                toyBusiness.createHelicopter();
+                toyBusiness.createToy("helicopter");
             } else{
                 System.out.println("Command unknown!");
             }
