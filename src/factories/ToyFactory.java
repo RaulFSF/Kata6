@@ -3,18 +3,18 @@ package factories;
 import toys.toyproducts.Toy;
 
 public abstract class ToyFactory{
-    protected SerialNumberGenerator serialNumberGenerator = new SerialNumberGenerator();
+    
 
     public ToyFactory() {
     }
     
-    public Toy produceToy(String type){
-        Toy toy = createToy(type);
+    public Toy produceToy(Integer serialNumber){
+        Toy toy = createToy(serialNumber);
         toy.pack();
         toy.label();
         return toy;
     }
     
-    public abstract Toy createToy(String type);
+    public abstract Toy createToy(Integer serialNumber);
     
 }
