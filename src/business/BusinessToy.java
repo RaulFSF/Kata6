@@ -6,7 +6,6 @@ import java.util.Map;
 import toys.toyproducts.Toy;
 
 public class BusinessToy{
-    protected SerialNumberGenerator serialNumberGenerator = new SerialNumberGenerator();
     private final Map<String, ToyFactory> toyFactories;
     
     public BusinessToy(Map<String, ToyFactory> toyFactories) {
@@ -15,7 +14,7 @@ public class BusinessToy{
 
     public Toy produceToy(String type){
         if(toyFactories.containsKey(type)){
-            return toyFactories.get(type).createToy(serialNumberGenerator.next());
+            return toyFactories.get(type).createToy(SerialNumberGenerator.getInstance().next());
         } else{
             System.out.println("Command unknown!");
             return null;
